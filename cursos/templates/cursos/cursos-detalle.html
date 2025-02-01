@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block title %}Detalles del Curso{% endblock %}
+{% block content %}
+<div class="container">
+    <h2>Detalles del Curso</h2>
+    <form>
+        {{ form.as_p }}
+        <a href="{% url 'cursos_lista' %}" class="btn btn-secondary">Volver</a>
+    </form>
+</div>
+{% endblock %}
