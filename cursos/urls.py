@@ -1,8 +1,9 @@
 from django.urls import path
-from .views import cursos_create, cursos_read, cursos_read_one, cursos_update, cursos_delete
+from .views import inicio, cursos_create, cursos_read, cursos_read_one, cursos_update, cursos_delete
 
 urlpatterns = [
-    path("", cursos_read, name="cursos_lista"),
+    #path("", cursos_read, name="cursos_lista"),
+    path("inicio/", inicio, name="inicio"),  # ✅ Agregamos la vista de inicio
     path("crear/", cursos_create, name="cursos_crear"),
     path("<int:curso_id>/", cursos_read_one, name="cursos_detalle"),
     path("actualizar/<int:curso_id>/", cursos_update, name="cursos_actualizar"),

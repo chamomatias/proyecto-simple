@@ -3,6 +3,12 @@ from django.contrib.auth.decorators import login_required
 from .models import Cursos  # ✅ Importamos el modelo correctamente
 from . import forms  # ✅ Importamos los formularios correctamente
 
+
+def inicio(request):
+    """Página de inicio."""
+    return render(request, "cursos/inicio.html")  # ✅ Renderiza el template correcto
+
+
 @login_required
 def cursos_create(request):
     """Crea un nuevo curso."""
